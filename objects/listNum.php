@@ -5,6 +5,7 @@ class ListNum
   private $listLength;
 
   public function __construct($min, $max) {
+    echo $this->listLength;
     $this->listLength = rand($min, $max);
 
     for ($i=0; $i < $this->listLength ; $i++) {
@@ -32,7 +33,4 @@ class ListNum
   }
 }
 
-$newList = new ListNum(10, 20);
-$newList->moyenne();
-
-?>
+  ?>
