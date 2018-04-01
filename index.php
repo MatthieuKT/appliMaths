@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Stats desc'</title>
+    <link rel="stylesheet" type="text/css" href="libs/custom.css"
   </head>
   <body>
 
@@ -13,10 +14,17 @@
   $newList = new ListNum(10, 20);
   ?>
 
-  <form>
-    <input type="text" name="moyenne" value="moyenne" id="moyenne" />
+<div class="container">
+  <?php $newList->getList() // récupère la liste de nombres aléatoires ?>
+
+  <form id="form">
+    <label for="moyenne">Moyenne: </label>
+    <input type="text" name="moyenne" id="moyenne" />
     <input type="submit" />
   </form>
+
+</div>
+
 
 
   <script type="text/javascript" src="ajax.js"></script>
