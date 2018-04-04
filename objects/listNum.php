@@ -29,7 +29,37 @@ class ListNum
       $somme += $value;
     }
     $moyenne = round($somme / $this->listLength);
-    echo $moyenne;
+    return $moyenne;
+  }
+
+  public function mediane() {
+  //total numbers in array
+  $count = count($this->list);
+  // find the middle value, or the lowest middle value
+  $middleVal = floor(($count-1)/2);
+    if ($count % 2) { // odd number, middle is the median
+      $median = $this->list[$middleVal];
+    } else { // even number , calculate avg of 2 medians
+      $low = $this->list[$middleVal];
+      $high = $this->list[$middleVal+1];
+      $median = (($low+$high)/2);
+    }
+  echo $median;
+  }
+
+  public function variance() {
+    // initialise la somme
+    $somme = 0;
+    $sommeEffectif = 0;
+    // récupère la moyenne qui nous servira dans le calcul
+    $moyenne = $this->moyenne($this->list);
+    // Compte les occurences du tableau
+    $effectives = array_count_values($this->list);
+    foreach ($effectives as $effectif => $value) {
+      $somme += ($effectif*pow(($value-$moyenne),2));
+
+    }
+    echo $somme;
   }
 }
 

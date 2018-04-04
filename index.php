@@ -12,6 +12,7 @@
 
   // initialise une liste entre 10 et 20 nombres
   $newList = new ListNum(10, 20);
+  $newList->variance();
   ?>
 
 <div class="container">
