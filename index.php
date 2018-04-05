@@ -14,16 +14,18 @@
 
   // initialise une liste entre 10 et 20 nombres
   $dataSet = new DataSet(10, 20);
-  $stats = new Stats();
+  $stats = new Stats($dataSet->getData());
 ?>
 
 <div class="container">
   <?php
   // affiche la liste de nombres aléatoires
-   echo $dataSet->displayData();
+   $dataSet->displayData();
 
    // affiche la solution pour débugage
-   echo "<br/> Solution moyenne: " . $stats->moyenne($dataSet->getData());
+   echo "<br/><br/> Solution moyenne: " . $stats->moyenne();
+   echo "<br/> Solution mediane: " . $stats->mediane();
+   echo "<br/> variance: " . $stats->variance();
   ?>
 
   <form id="form" method="post" action="traitement.php">
@@ -37,6 +39,10 @@
     ?>
     <label for="moyenne">Moyenne: </label>
     <input type="text" name="moyenne" id="moyenne" />
+    <label for="mediane">Mediane: </label>
+    <input type="text" name="mediane" id="mediane" />
+    <label for="variance">Variance: </label>
+    <input type="text" name="variance" id="variance" />
     <input type="submit" />
   </form>
 
