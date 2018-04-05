@@ -36,7 +36,6 @@ include_once "objects/Stats.php";
     } else {
       echo "variance echec <br>";
     }
-
   }
 
  ?>
