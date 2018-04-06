@@ -3,20 +3,21 @@ class Stats
 {
   // initialise le tableau de données
   private $dataSet = array();
-
+  private $dataSetLength;
   // le constructeur prends en paramètres un tableau de données
   public function __construct(array $dataset) {
     $this->dataSet = $dataset;
+    $this->dataSetLength = count($dataset);
   }
 
   // Calcul de la moyenne
   public function moyenne() {
     $somme = 0;
     // additionne tous les éléments du tableau
-    foreach ($this->dataSet as $key => $value) {
+    foreach ($this->dataSet as $value) {
       $somme += $value;
     }
-    $moyenne = round($somme / 9);
+    $moyenne = round($somme / $this->dataSetLength);
     return $moyenne;
   }
 

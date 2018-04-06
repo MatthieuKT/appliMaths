@@ -13,12 +13,12 @@
   $stats = new Stats($dataSet->getData());
 
   // display the list of random numbers
-   $dataSet->displayData();
+  $dataSet->displayData();
 
-   // display the exercice resolution for debug
-   echo "<br/><br/> Solution moyenne: " . $stats->moyenne();
-   echo "<br/> Solution mediane: " . $stats->mediane();
-  ?>
+  // display the exercice resolution for debug
+  echo "<br/><br/> Solution moyenne: " . $stats->moyenne();
+  echo "<br/> Solution mediane: " . $stats->mediane();
+?>
 
   <form id="form" method="post" action="../solutions/traitement.php">
     <?php
@@ -29,6 +29,7 @@
         echo '<input type="hidden" name="result[]" value="'. $value. '">';
       }
     ?>
+    
     <label for="moyenne">Moyenne: </label>
     <input type="text" name="moyenne" id="moyenne" />
     <label for="mediane">Mediane: </label>
