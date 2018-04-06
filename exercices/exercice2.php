@@ -1,18 +1,17 @@
 <?php
   // set page headers
-  $page_title = "Exercice 1";
+  $page_title = "Exercice 2";
   include_once "layout_header.php";
 
   // include object file
-  require_once "objects/DataSet.php";
-  require_once "objects/Stats.php"; // on retirera apres
+  require_once "../objects/DataSet.php";
+  require_once "../objects/Stats.php"; // on retirera apres
 
   // prepare Dataset and Stats objects
-  $dataSet = new DataSet(10, 20); // init a list of random numbers between 10 and 20
+  // init a list of random numbers between 10 and 20
+  $dataSet = new DataSet(10, 20);
   $stats = new Stats($dataSet->getData());
-?>
 
-  <?php
   // display the list of random numbers
    $dataSet->displayData();
 
@@ -22,7 +21,7 @@
    echo "<br/> variance: " . $stats->variance();
   ?>
 
-  <form id="form" method="post" action="traitement.php">
+  <form id="form" method="post" action="../solutions/traitement.php">
     <?php
       // parrallèlement on récupère les data pour les transmettre via formulaire
       $actuelData = $dataSet->getData();

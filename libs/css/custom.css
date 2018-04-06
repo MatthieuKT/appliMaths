@@ -12,3 +12,15 @@ label
 form {
   margin-top: 7%;
 }
+table, td, th {
+  border: 1px black solid;
+  border-collapse: collapse;
+}
+th {
+text-align: left;
+width: 200px;
+}
+th, td {
+  padding:10px;
+  text-align: left;
+}
