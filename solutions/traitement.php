@@ -1,6 +1,15 @@
 <?php
+// A optimiser
+session_start();
+echo $_SESSION["count"];
+
+// set page headers
+$page_title = "correction";
+include_once "../exercices/layout_header.php";
+
+
+// include object files
 include_once "../objects/Stats.php";
-// l'objet qui génère des liens aléatoires
 include_once "../objects/Rand.php";
 
 
@@ -15,6 +24,7 @@ if (isset($_POST["moyenne"]) && isset($_POST["result"])) {
 
   if($stats->moyenne() == $moyenne) {
     echo "<br><br><br>moyenne Bingo! <br>";
+    // apparition du bouton
   } else {
     echo "<br><br><br>moyenne echec <br>";
   }
@@ -52,4 +62,14 @@ if (isset($_POST["variance"]) && isset($_POST["result"])) {
   }
 }
 
-?>
+// Redirige le client soit vers un nouvel exercice soit vers la fin
+if ($_SESSION["count"] < 3) {
+  $_SESSION["count"]+=1;
+  echo '<a href="../randomRedirect.php">continuer</a>';
+} elseif ($_SESSION["count"] == 3) {
+  $_SESSION["count"] = 0;
+  echo '<a href="../index.php">continuer</a>';
+}
+
+
+include_once "../exercices/layout_footer.php"; ?>

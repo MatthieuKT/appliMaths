@@ -5,6 +5,6 @@
     <title>Accueil</title>
   </head>
   <body>
-    <a href="exercices/exercice1">exercices</a>
+    <a href="exercices/exercice1.php">exercices</a>
   </body>
 </html>

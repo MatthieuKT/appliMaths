@@ -29,7 +29,7 @@
         echo '<input type="hidden" name="result[]" value="'. $value. '">';
       }
     ?>
-    
+
     <label for="moyenne">Moyenne: </label>
     <input type="text" name="moyenne" id="moyenne" />
     <label for="mediane">Mediane: </label>
