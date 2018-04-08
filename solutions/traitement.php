@@ -1,5 +1,7 @@
 <?php
 include_once "../objects/Stats.php";
+// l'objet qui génère des liens aléatoires
+include_once "../objects/Rand.php";
 
 
 if (isset($_POST["moyenne"]) && isset($_POST["result"])) {
