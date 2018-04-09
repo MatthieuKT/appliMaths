@@ -1,12 +1,15 @@
 <?php
-// A optimiser
-session_start();
-echo $_SESSION["count"];
+// $_SESSION["count"];
+// echo $_SESSION["count"];
 
 // set page headers
 $page_title = "correction";
 include_once "../exercices/layout_header.php";
-
+include_once "../objects/AdaptiveLoop.php";
+$loop = new AdaptiveLoop(2);
+$loop->setLoop();
+echo $loop->getLoop();
+$loop->activeLoops();
 
 // include object files
 include_once "../objects/Stats.php";
@@ -63,13 +66,13 @@ if (isset($_POST["variance"]) && isset($_POST["result"])) {
 }
 
 // Redirige le client soit vers un nouvel exercice soit vers la fin
-if ($_SESSION["count"] < 3) {
-  $_SESSION["count"]+=1;
-  echo '<a href="../randomRedirect.php">continuer</a>';
-} elseif ($_SESSION["count"] == 3) {
-  $_SESSION["count"] = 0;
-  echo '<a href="../index.php">continuer</a>';
-}
+// if ($_SESSION["count"] < 0) {
+//   $_SESSION["count"]+=1;
+//   echo '<a href="../randomRedirect.php">continuer</a>';
+// } elseif ($_SESSION["count"] == 3) {
+//   $_SESSION["count"] = 0;
+//   echo '<a href="../index.php">continuer</a>';
+// }
 
 
 include_once "../exercices/layout_footer.php"; ?>
