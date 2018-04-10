@@ -8,14 +8,10 @@
   require_once "../objects/Stats.php"; // on retirera apres
 
   // prepare Dataset and Stats objects
-  // init a list of random numbers between 10 and 20
+  // init a list of random numbers between 20 and 50
   $dataSet = new DataSet(20, 50);
   $stats = new Stats($dataSet->getData());
 
-  // display the list of random numbers
-  //$dataSet->displayData();
-
-  // parrallèlement on récupère les data pour les transmettre via formulaire
   $data = $dataSet->getData();
   $count = array_count_values($data);
   $tri = array_unique($data);
