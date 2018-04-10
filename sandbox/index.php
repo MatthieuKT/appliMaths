@@ -22,13 +22,8 @@
 		<script type="text/javascript">
 
     $("document").ready(function() {
-      // $('#start').click(function(){
-      //   // charge l'exercice. plus tard on testera un petit echo ici.
-      //   $('#container').load('exercice.php #test', function(){
-      //   });
-      // });
 
-      // evenement appliquable une fois seulement que #correction est créé
+      // evenement appliquable une fois seulement que #next est créé
       $('#container').on('click', '#next', function(){
         $('#container').load('exercice.php #test');
       });

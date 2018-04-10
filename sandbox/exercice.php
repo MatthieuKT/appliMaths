@@ -1,12 +1,8 @@
-
-
 <?php
-$nb1 = rand(1,9);
- ?>
-      <div id="test">
-      <?php echo $nb1 ?>+1=
-      <form id="correction">
-        <input type="text" name="reponse" id="reponse"/>
-        <input type="submit" />
-      </form>
-    </div>
+// tableau d'URL
+$sommaire = array('ex1.php', 'ex2.php');
+// selectionne une URL au hasard entre 0 et la longueur maximum de l'array
+$nb1 = rand(0,(count($sommaire)-1));
+// inclus le fichier ciblé
+include $sommaire[$nb1];
+?>
