@@ -1,9 +1,11 @@
+
+<div id="soluce">
 <?php
   if (isset($_POST["reponse"])) {
-   echo "yooooo!";
-  }
-  if ($_POST) {
-    header ('Lcocation: http://google.fr');
-  }
-
+   echo $_POST["reponse"];
+ } else {
+   echo "what?";
+ }
  ?>
+ <button id="next">suivant</button>
+</div>
