@@ -1,10 +1,30 @@
 <?php
-$nb1 = rand(1, 9);
- ?>
+// include object file
+require_once "../objects/DataSet.php";
+require_once "../objects/Stats.php";
+
+// prepare Dataset and Stats objects
+// init a list of random numbers between 10 and 20
+$dataSet = new DataSet(5, 8);
+$stats = new Stats($dataSet->getData());
+$_SESSION['dataSet'] = $dataSet->getData();
+?>
+
+
 <div id="test">
-<?php echo $nb1 ?>+1=
-<form id="correction">
-  <input type="text" name="reponse" id="reponse"/>
+<?php
+$dataSet->displayData();
+
+// display the exercice resolution for debug
+echo "<br/><br/> Solution moyenne: " . $stats->moyenne();
+echo "<br/>Solution mediane: " . $stats->mediane() . "<br/><br/>";
+?>
+
+<form id="reponse">
+  <label for="moyenne">Moyenne:</label>
+  <input type="text" name="moyenne"/>
+  <label for="mediane">Médiane:</label>
+  <input type="text" name="mediane"/>
   <input type="submit" />
 </form>
 </div>

@@ -1,3 +1,8 @@
+<?php
+//session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -29,14 +34,14 @@
       });
 
       // evenement appliquable une fois seulement que #correction est créé
-      $('#container').on('submit', '#correction', function(e){
+      $('#container').on('submit', '#reponse', function(e){
         e.preventDefault();
         // Recupère tous les champs du formulaire #correction
         var formContent = $( this ).serialize();
         $('#container').load('correction.php #soluce',
         {
           // reponse entrée dans l'input
-          reponse:formContent
+            reponse:formContent
           // penser à récupérer les input type hidden aussi (remplacer par une session?)
         }
       );

@@ -5,3 +5,12 @@
   margin-right: auto;
   border: 1px blue solid;
 }
+body {
+  background-color: black;
+  color: green;
+}
+label
+{
+	display: block; /* La balise devient de type block. */
+	width: 150px;
+}
