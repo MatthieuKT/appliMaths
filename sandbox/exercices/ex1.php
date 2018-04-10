@@ -8,11 +8,8 @@ require_once "../objects/Stats.php";
 $dataSet = new DataSet(5, 8);
 $stats = new Stats($dataSet->getData());
 $_SESSION['dataSet'] = $dataSet->getData();
-?>
 
-
-<div id="test">
-<?php
+// Affichage du dataSet pour les besoins de l'énoncé
 $dataSet->displayData();
 
 // display the exercice resolution for debug
@@ -27,4 +24,3 @@ echo "<br/>Solution mediane: " . $stats->mediane() . "<br/><br/>";
   <input type="text" name="mediane"/>
   <input type="submit" />
 </form>
-</div>

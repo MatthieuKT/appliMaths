@@ -18,11 +18,7 @@ $count = array_count_values($data);
 $tri = array_unique($data);
 // trie les valeurs pour les besoins de l'affichage
 sort($tri);
-?>
 
-
-<div id="test">
-<?php
 // display the exercice resolution for debug
 echo "<br/> Solution mediane: " . $stats->mediane();
 ?>
@@ -51,4 +47,3 @@ echo "<br/> Solution mediane: " . $stats->mediane();
   <input type="text" name="mediane"/>
   <input type="submit" />
 </form>
-</div>

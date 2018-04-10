@@ -8,13 +8,17 @@
   <head>
     <meta charset="utf-8">
     <title>phase 1</title>
-    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="libs/css/custom.css">
   </head>
   <body>
 
 
     <div id="container">
-        <button id="next">Commencer</button>
+      <form class="next">
+        <!--autofocus car il suffit d'appuyer directement
+        sur la touche entrée pour démarrer-->
+        <input type="submit" value="commencer" autofocus>
+      </form>
     </div>
 
 
@@ -29,8 +33,9 @@
     $("document").ready(function() {
 
       // evenement appliquable une fois seulement que #next est créé
-      $('#container').on('click', '#next', function(){
-        $('#container').load('exercice.php #test');
+      $('#container').on('submit', '.next', function(e){
+        e.preventDefault();
+        $('#container').load('exercice.php');
       });
 
       // evenement appliquable une fois seulement que #correction est créé
@@ -38,7 +43,7 @@
         e.preventDefault();
         // Recupère tous les champs du formulaire #correction
         var formContent = $( this ).serialize();
-        $('#container').load('correction.php #soluce',
+        $('#container').load('correction.php',
         {
           // reponse entrée dans l'input
             reponse:formContent

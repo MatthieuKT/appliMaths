@@ -2,12 +2,9 @@
 session_start();
  // include object files
 include_once "../objects/Stats.php";
-include_once "../objects/Rand.php"; ?>
+include_once "../objects/Rand.php";
 
-
-
-<div id="soluce">
-<?php
+// si envoi du formulaire
 if (isset($_POST["reponse"])) {
   // Extraction des données contenues dans $_POST["reponse"]
   parse_str($_POST["reponse"]);
@@ -43,5 +40,11 @@ if (isset($_POST["reponse"])) {
   }
 }
  ?>
- <button id="next">suivant</button>
-</div>
+ <form class="next">
+   <input type="submit" value="suivant" id="suivant">
+ </form>
+
+<!-- simple script permettant d'avoir directement le focus -->
+ <script type="text/javascript">
+   document.getElementById('suivant').focus();
+ </script>
