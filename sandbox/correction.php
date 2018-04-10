@@ -17,17 +17,29 @@ if (isset($_POST["reponse"])) {
   $data = $_SESSION['dataSet'];
   // Initialisation d'un objet $stats
   $stats = new Stats($data);
-
-  if (isset($moyenne) && $moyenne == $stats->moyenne()){
-    echo "moyenne ok! <br>";
-  }  else {
-    echo "moyenne echec";
+  // Si moyenne existe
+  if (isset($moyenne)){
+    if ($moyenne == $stats->moyenne()) {
+      echo "moyenne ok! <br>";
+    }  else {
+      echo "moyenne echec <br>";
+    }
   }
-
-  if (isset($mediane) && $mediane == $stats->mediane()){
-    echo "mediane ok!";
-  }  else {
-    echo "mediane echec";
+  // Si mediane existe
+  if (isset($mediane)){
+    if ($mediane == $stats->mediane()) {
+      echo "mediane ok! <br>";
+    }  else {
+      echo "mediane echec <br>";
+    }
+  }
+  // Si variance existe
+  if (isset($variance)) {
+    if ($variance == $stats->variance()) {
+      echo "variance ok!";
+    }  else {
+      echo "variance echec";
+    }
   }
 }
  ?>
