@@ -20,7 +20,7 @@
   echo "<br/> Solution mediane: " . $stats->mediane();
 ?>
 
-  <form id="form" method="post" action="../solutions/traitement.php">
+  <form id="form">
     <?php
       // parrallèlement on récupère les data pour les transmettre via formulaire
       $actuelData = $dataSet->getData();

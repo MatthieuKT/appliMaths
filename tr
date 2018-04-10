@@ -1,0 +1,71 @@
+[33mcommit 55d540a9c83246f6ab0ef0ae7a5bc076c97548ce[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Douze <kwant.matthieu@gmail.com>
+Date:   Sun Apr 8 14:47:47 2018 +0200
+
+    ajout du random et du decompte d'exercices
+
+[33mcommit 9cd83efb59ade913380ca6b29f18e004b3eae491[m
+Author: Douze <kwant.matthieu@gmail.com>
+Date:   Sun Apr 8 02:54:01 2018 +0200
+
+    ajout de la classe Rand()
+
+[33mcommit 0dee03889db171f67c4b6647cfb4b028803e2143[m
+Author: kwant <kwant.matthieu@gmail.com>
+Date:   Fri Apr 6 10:12:49 2018 +0200
+
+    correction du bug dans le calcul de la moyenne
+
+[33mcommit 37806bf68cf019cd1b654874d27a03119a289143[m
+Author: kwant <kwant.matthieu@gmail.com>
+Date:   Fri Apr 6 08:59:58 2018 +0200
+
+    reorganisation des fichiers, ajout d'exercices et correction pour chacun
+
+[33mcommit 28c4f46d0af756916648281bf5720b2c4edc8b85[m
+Author: Douze <kwant.matthieu@gmail.com>
+Date:   Thu Apr 5 17:26:21 2018 +0200
+
+    reorganisation des fichiers
+
+[33mcommit 98412bb763bb3c3ef1ce7aff1f4663fc542b404c[m
+Author: Douze <kwant.matthieu@gmail.com>
+Date:   Thu Apr 5 14:09:25 2018 +0200
+
+    refonte de l'appli
+
+[33mcommit e676091c8c7f2bcddcd5eefc127c4021e9e7ad06[m
+Author: Douze <kwant.matthieu@gmail.com>
+Date:   Thu Apr 5 02:40:17 2018 +0200
+
+    refactoring des objets et mise en place de la correction
+
+[33mcommit b40b4e72ec1d89014912dbbf8596b600d3698505[m
+Author: Douze <kwant.matthieu@gmail.com>
+Date:   Wed Apr 4 18:26:37 2018 +0200
+
+    Ajout d'une methode de calcul de la mediane
+
+[33mcommit 6726eb4c83aac2af183b4189e4d3d8e95c664c4b[m
+Author: kwant <kwant.matthieu@gmail.com>
+Date:   Sun Apr 1 09:52:46 2018 +0200
+
+    mise en place de l'AJAX
+
+[33mcommit 5532dda03d9cf61e6f7f00e6a50ed4404f0f0d2a[m
+Author: kwant <kwant.matthieu@gmail.com>
+Date:   Sat Mar 31 23:58:55 2018 +0200
+
+    squelette de l'appli
+
+[33mcommit 74e947eeda21a9e2641f07d7f788ff3a816d4fac[m
+Author: kwant <kwant.matthieu@gmail.com>
+Date:   Sat Mar 31 23:12:46 2018 +0200
+
+    generation d'une liste de nombres et calcul de moyenne
+
+[33mcommit fc0189e103be8a17d546dd0d0d062be09b4bfa08[m
+Author: MatthieuKT <33154618+MatthieuKT@users.noreply.github.com>
+Date:   Sat Mar 31 23:09:30 2018 +0200
+
+    Initial commit
