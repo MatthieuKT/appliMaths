@@ -4,6 +4,8 @@
 
 // set page headers
 $page_title = "correction";
+
+// object files
 include_once "../exercices/layout_header.php";
 include_once "../objects/AdaptiveLoop.php";
 $loop = new AdaptiveLoop(2);

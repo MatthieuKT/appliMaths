@@ -1,10 +1,12 @@
 <?php
 session_start();
  // include object files
-include_once "../objects/Stats.php";
-include_once "../objects/Rand.php";
+include_once "objects/Stats.php";
+include_once "objects/AdaptiveLoop.php";
 
-// si envoi du formulaire
+$loop = new AdaptiveLoop(5);
+
+// si réception du formulaire
 if (isset($_POST["reponse"])) {
   // Extraction des données contenues dans $_POST["reponse"]
   parse_str($_POST["reponse"]);
@@ -39,10 +41,19 @@ if (isset($_POST["reponse"])) {
     }
   }
 }
- ?>
- <form class="next">
-   <input type="submit" value="suivant" id="suivant">
- </form>
+
+
+?>
+
+ <!-- ici on changera le formulaire en fin de session count -->
+
+
+
+
+
+
+   <?php $loop->activeLoops(); ?>
+
 
 <!-- simple script permettant d'avoir directement le focus -->
  <script type="text/javascript">
